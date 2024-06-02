@@ -1,10 +1,13 @@
+/* mengatur font family yang digunakan */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
+/* mengatur font family pada tag body */
 body {
   font-family: 'Nunito Sans', sans-serif;
 }
 
+/* mengatur font family pada class font-plus-jakarta-sans */
 .font-plus-jakarta-sans {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }

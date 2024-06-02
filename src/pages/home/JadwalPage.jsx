@@ -1,8 +1,12 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import { PetugasData } from "../../data/Data";
 import kalender from "../../assets/img/kalender.svg";
 
-const PanggilPage = () => {
+//membuat arrow function untuk halaman jadwal petugas
+const JadwalPage = () => {
+
+  //sebuah variabel yang menampung data petugas
   const petugas = PetugasData;
 
   return (
@@ -16,13 +20,13 @@ const PanggilPage = () => {
           </h1>
         </div>
         <div className="flex justify-between items-center">
-          <img src={kalender} alt="" className="min-w-10 h-14" />
+          <img src={kalender} alt="" className="min-w-10 h-12 mr-2" />
           <button className="bg-baseColor text-white rounded-full w-full h-10 font-bold text-sm px-5">
             Hari ini / Senin - 20 mei - 2024
           </button>
         </div>
       </div>
-      <div className="bg-baseColor h-2 w-full mb-10"></div>
+      <div className="bg-baseColor h-1 w-full mb-10"></div>
       <div className="flex flex-wrap justify-center">
         {petugas.slice(0, 2).map((p, i) => (
           <div key={i} className="max-w-xs flex mx-40 px-3">
@@ -52,4 +56,5 @@ const PanggilPage = () => {
   );
 };
 
-export default PanggilPage;
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik
+export default JadwalPage;

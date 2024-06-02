@@ -1,10 +1,16 @@
+// mengimpor modul-modul yang diperlukan
 import { useState } from "react";
 import PropTypes from "prop-types";
 
+//membuat arrow function untuk drop down jenis penarikan pada halaman penarikan
 const ImageDropdown = ({ options }) => {
+
+  //sebuah state untuk opsi yang dipilih
   const [selectedOption, setSelectedOption] = useState(null);
+  //sebuah state untuk menentukan apakah elemen terbuka atau tidak
   const [isOpen, setIsOpen] = useState(false);
 
+  //sebuah arrow function untuk menangani klik pada opsi
   const handleOptionClick = (option) => {
     setSelectedOption(option);
     setIsOpen(false);
@@ -77,9 +83,11 @@ const ImageDropdown = ({ options }) => {
   );
 };
 
+//untuk memastikan bahwa properti yang diberikan ke komponen sesuai dengan tipe data
 ImageDropdown.propTypes = {
   options: PropTypes.array,
   map: PropTypes.node,
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default ImageDropdown;

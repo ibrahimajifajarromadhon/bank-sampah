@@ -1,7 +1,9 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import back from "../../assets/img/back.svg";
 import Button from "../../components/Button";
 
+//sebuah arrow function untuk mengatur halaman konfirmasi alamat
 const KofirmasiAlamatPage = () => {
   return (
     <>
@@ -45,4 +47,5 @@ const KofirmasiAlamatPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default KofirmasiAlamatPage;

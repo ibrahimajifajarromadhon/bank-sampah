@@ -1,15 +1,21 @@
+// mengimpor modul-modul yang diperlukan
 import { useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+//membuat arrow function untuk mengatur navbar yang bersifat reusable components
 const Navbar = () => {
+  //sebuah variabel untuk mengakses lokasi url
   const location = useLocation();
 
+  //sebuah state untuk menampilkan menu tambahan
   const [showAdditionalMenu, setShowAdditionalMenu] = useState(false);
 
+  //sebuah effect untuk memperbarui menu tambahan
   useEffect(() => {
     setShowAdditionalMenu(location.pathname !== "/");
   }, [location]);
 
+  //sebuah arrow function untuk mendapatkan menu kelas
   const getMenuClass = (...paths) => {
     return paths.includes(location.pathname) ? "text-green-500" : "text-white";
   };
@@ -33,13 +39,16 @@ const Navbar = () => {
         )}
         {showAdditionalMenu && (
           <>
-            <div className="flex font-semibold justify-end">
-              <a href="/home" className={`px-3 py-2 ${getMenuClass("/home")}`}>
+            <div className="font-semibold">
+              <a
+                href="/home"
+                className={`px-3 py-2 text-lg ${getMenuClass("/home")}`}
+              >
                 Home
               </a>
               <a
                 href="/tabung-tarik"
-                className={`px-3 py-2 ${getMenuClass(
+                className={`px-3 py-2 text-lg ${getMenuClass(
                   "/tabung-tarik",
                   "/confirm-ditarik",
                   "/sudah-ditarik"
@@ -49,19 +58,19 @@ const Navbar = () => {
               </a>
               <a
                 href="/kategori"
-                className={`px-3 py-2 ${getMenuClass("/kategori")}`}
+                className={`px-3 py-2 text-lg ${getMenuClass("/kategori")}`}
               >
                 Kategori Sampah
               </a>
               <a
                 href="/jadwal"
-                className={`px-3 py-2 ${getMenuClass("/jadwal")}`}
+                className={`px-3 py-2 text-lg ${getMenuClass("/jadwal")}`}
               >
                 Penjadwalan
               </a>
               <a
                 href="/panggil"
-                className={`px-3 py-2 ${getMenuClass(
+                className={`px-3 py-2 text-lg ${getMenuClass(
                   "/panggil",
                   "/confirm-alamat",
                   "/confirm-diambil",
@@ -72,7 +81,7 @@ const Navbar = () => {
               </a>
             </div>
             <a href="/profile">
-              <button className="bg-white text-black rounded-md h-10 w-40 font-bold">
+              <button className="bg-white text-black rounded-md h-auto w-auto px-10 py-2 font-bold text-lg">
                 Nama Profile
               </button>
             </a>
@@ -83,4 +92,5 @@ const Navbar = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default Navbar;

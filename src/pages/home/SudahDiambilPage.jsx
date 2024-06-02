@@ -1,7 +1,9 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import back from "../../assets/img/back.svg";
 import diambil from "../../assets/img/diambil.svg";
 
+//sebuah arrow function untuk mengatur halaman sudah diambil
 const SudahDiambilPage = () => {
   return (
     <>
@@ -28,4 +30,5 @@ const SudahDiambilPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default SudahDiambilPage;

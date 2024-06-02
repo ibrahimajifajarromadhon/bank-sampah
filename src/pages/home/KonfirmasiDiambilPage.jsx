@@ -1,8 +1,10 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import back from "../../assets/img/back.svg";
 import Button from "../../components/Button";
 import jam from "../../assets/img/jam.svg";
 
+//sebuah arrow function untuk mengatur halaman konfirmasi diambil
 const KofirmasiDiambilPage = () => {
   return (
     <>
@@ -35,4 +37,5 @@ const KofirmasiDiambilPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default KofirmasiDiambilPage;

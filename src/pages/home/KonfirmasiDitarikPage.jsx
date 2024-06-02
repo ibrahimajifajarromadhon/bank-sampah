@@ -1,28 +1,17 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import back from "../../assets/img/back.svg";
 import Button from "../../components/Button";
 import ImageDropdown from "../../components/ImageDropdown";
-import dana from "../../assets/img/dana.svg";
-import bri from "../../assets/img/bri.svg";
-import ovo from "../../assets/img/ovo.svg";
-import bca from "../../assets/img/bca.svg";
-import gopay from "../../assets/img/gopay.svg";
-import bsi from "../../assets/img/bsi.svg";
-import shopee from "../../assets/img/shopee.svg";
-import mandiri from "../../assets/img/mandiri.svg";
 import withdraw from "../../assets/img/withdraw.svg";
+import { GambarDropdown } from "../../data/Data";
 
+//sebuah arrow function untuk mengatur halaman konfirmasi ditarik
 const KonfirmasiDitarikPage = () => {
-  const options = [
-    { value: "1", image: dana },
-    { value: "2", image: bri },
-    { value: "3", image: ovo },
-    { value: "4", image: bca },
-    { value: "5", image: gopay },
-    { value: "6", image: bsi },
-    { value: "7", image: shopee },
-    { value: "8", image: mandiri },
-  ];
+
+  //sebuah variabel yang menampung data gambar untuk dropdown
+  const options = GambarDropdown;
+
   return (
     <>
       <Navbar />
@@ -58,4 +47,5 @@ const KonfirmasiDitarikPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik
 export default KonfirmasiDitarikPage;

@@ -55,4 +55,5 @@ const ProfilePage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default ProfilePage;

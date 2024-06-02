@@ -1,14 +1,18 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import { FeaturesData } from "../../data/Data";
 
+//membuat arrow function untuk halaman home/features
 const HomePage = () => {
+  
+  //sebuah variabel yang menampung data petugas
   const features = FeaturesData;
 
   return (
     <>
       <Navbar />
-      <h1 className="font-bold text-3xl text-center mt-10 mb-5">FEATURES</h1>
-      <div className="flex flex-wrap justify-center">
+      <h1 className="font-bold text-4xl text-center mt-20 mb-5">FEATURES</h1>
+      <div className="flex flex-wrap justify-center items-center">
         {features.map((f, i) => (
           <div key={i} className="max-w-xs flex">
             <div className="flex flex-col p-5">
@@ -25,4 +29,5 @@ const HomePage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik
 export default HomePage;

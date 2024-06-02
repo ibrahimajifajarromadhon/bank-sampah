@@ -1,7 +1,9 @@
+// mengimpor modul-modul yang diperlukan
 import BankSampah from "../../components/BankSampah";
 import trash from "../../assets/img/trash.svg";
 import ButtonSignUp from "../../components/ButtonSignUp";
 
+//sebuah arrow function untuk halaman login
 const LoginPage = () => {
   return (
     <div className="flex h-screen">
@@ -51,4 +53,5 @@ const LoginPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default LoginPage;

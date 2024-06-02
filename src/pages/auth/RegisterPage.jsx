@@ -1,7 +1,9 @@
+// mengimpor modul-modul yang diperlukan
 import BankSampah from "../../components/BankSampah";
 import trash from "../../assets/img/trash.svg";
 import ButtonSignUp from "../../components/ButtonSignUp";
 
+//sebuah arrow function untuk halaman register
 const RegisterPage = () => {
   return (
     <div className="flex h-screen">
@@ -49,13 +51,15 @@ const RegisterPage = () => {
             <div className="flex flex-row my-5 text-white text-sm">
               <input type="checkbox" className="w-4 h-4 my-auto" />
               <p className="mx-2 font-extralight">I agree to platforms</p>
-              <p className="font-bold">Terms of service</p>{" "}
-              <p className="mx-2">and</p>{" "}
+              <p className="font-bold">Terms of service</p>
+              <p className="mx-2">and</p>
               <p className="font-bold">Privacy policy</p>
             </div>
-            <button className="text-baseColor bg-white w-full h-12 rounded-md font-bold">
-              Sign Up
-            </button>
+            <a href="/login">
+              <button className="text-baseColor bg-white w-full h-12 rounded-md font-bold">
+                Sign Up
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -63,4 +67,5 @@ const RegisterPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default RegisterPage;

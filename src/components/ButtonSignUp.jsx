@@ -1,7 +1,9 @@
+// mengimpor modul-modul yang diperlukan
 import PropTypes from "prop-types";
 import google from "../assets/img/google.svg";
 import facebook from "../assets/img/fb.svg";
 
+//membuat arrow function untuk button sign up yang bersifat reusable components
 const ButtonSignUp = ({ logo, text }) => {
   return (
     <>
@@ -20,9 +22,11 @@ const ButtonSignUp = ({ logo, text }) => {
   );
 };
 
+//untuk memastikan bahwa properti yang diberikan ke komponen sesuai dengan tipe data
 ButtonSignUp.propTypes = {
   logo: PropTypes.node.isRequired,
   text: PropTypes.node.isRequired,
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default ButtonSignUp;

@@ -1,8 +1,10 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import back from "../../assets/img/back.svg";
 import dompet from "../../assets/img/dompet.svg";
 
-const SudahDiambilPage = () => {
+//sebuah arrow function untuk mengatur halaman sudah ditarik
+const SudahDitarikPage = () => {
   return (
     <>
       <Navbar />
@@ -29,4 +31,5 @@ const SudahDiambilPage = () => {
   );
 };
 
-export default SudahDiambilPage;
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
+export default SudahDitarikPage;

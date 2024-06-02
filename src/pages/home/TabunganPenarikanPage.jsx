@@ -1,3 +1,4 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import purse from "../../assets/img/purse.svg";
 import view from "../../assets/img/view.svg";
@@ -6,6 +7,7 @@ import money from "../../assets/img/money.svg";
 import wallet from "../../assets/img/e-wallet.svg";
 import arrow from "../../assets/img/arrow.svg";
 
+//sebuah arrow function untuk mengatur halaman tabungan+penarikan
 const TabunganPenarikanPage = () => {
   return (
     <>
@@ -27,22 +29,24 @@ const TabunganPenarikanPage = () => {
           <img src={view} alt="" className="max-w-12 h-12" />
         </div>
       </div>
-      <a href="/confirm-ditarik">
-        <div className="flex flex-col items-center justify-center my-10">
+      <div className="flex flex-col items-center justify-center my-10">
+        <a href="/confirm-ditarik">
           <div className="flex flex-wrap items-center">
             <div className="mx-3">
               <h1 className="text-2xl font-bold text-baseColor">IDR</h1>
               <div className="w-10 bg-baseColor h-1"></div>
             </div>
-              <img src={add} alt="" className="max-w-10 h-10" />
+            <img src={add} alt="" className="max-w-10 h-10" />
           </div>
+        </a>
+        <a href="/confirm-ditarik">
           <div className="flex flex-col items-center justify-center border border-baseColor bg-bgGray rounded-xl my-10 px-20 py-10">
             <h1 className="text-2xl text-textGray font-bold">Active Balance</h1>
             <img src={money} alt="" className="max-w-36 h-36" />
             <h1 className="text-xl text-textGray font-semibold">Kirim</h1>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
       <a href="/confirm-ditarik">
         <div className="flex justify-between bg-bgGray border border-baseColor p-3 w-full">
           <div className="flex flex-wrap items-center mx-5">
@@ -60,4 +64,5 @@ const TabunganPenarikanPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default TabunganPenarikanPage;

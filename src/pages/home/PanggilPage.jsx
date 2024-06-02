@@ -1,7 +1,11 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import { PetugasData } from "../../data/Data";
 
+//sebuah arrow function untuk mengatur halaman panggil petugas
 const PanggilPage = () => {
+  
+  //sebuah variabel yang menampung data petugas
   const petugas = PetugasData;
 
   return (
@@ -35,4 +39,5 @@ const PanggilPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik
 export default PanggilPage;

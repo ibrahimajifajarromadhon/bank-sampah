@@ -1,3 +1,4 @@
+// mengimpor modul-modul yang diperlukan
 import Navbar from "../../components/Navbar";
 import { useState } from "react";
 import kayu from "../../assets/img/kayu.svg";
@@ -6,11 +7,15 @@ import botol from "../../assets/img/botol.svg";
 import plastik from "../../assets/img/plastik.svg";
 import gambar from "../../assets/img/image.svg";
 
+//sebuah arrow function untuk mengatur halaman kategori sampah
 const KategoriPage = () => {
-  const [selectedCategory, setSelectedCategory] = useState("ORGANIK"); // Default to 'ORGANIK'
+
+  //sebuah state kategori, halaman saat ini dan variabel jumlah item per halaman
+  const [selectedCategory, setSelectedCategory] = useState("ORGANIK");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 2;
 
+  //sebuah variabel images yang berisi array of object untuk data kategori sampah
   const images = [
     {
       name: "KAYU",
@@ -62,19 +67,25 @@ const KategoriPage = () => {
     },
   ];
 
+  //sebuah arrow function untuk mengatur button organik dan anorgani ketika di klik
   const handleButtonClick = (category) => {
     setSelectedCategory(category);
     setCurrentPage(1);
   };
 
+  //sebuah arrow function untuk memperbarui halaman yang ditampilkan berdasarkan page number yang dipilih
   const handlePageChange = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
+  //untuk memfilter gambar berdasarkan kategori yang dipilih
   const filteredImages = images.filter(
     (image) => image.category === selectedCategory
   );
+  //untuk menghitung total halaman
   const totalPages = Math.ceil(filteredImages.length / itemsPerPage);
+
+  //untuk menampilkan gambar pada halaman tertentu
   const displayedImages = filteredImages.slice(
     (currentPage - 1) * itemsPerPage,
     currentPage * itemsPerPage
@@ -83,9 +94,9 @@ const KategoriPage = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-wrap justify-between mx-10 my-3">
+      <div className="flex flex-wrap justify-between mx-10 my-10">
         <div className="w-full md:w-1/2">
-          <h1 className="text-3xl font-bold mt-2">Kategori Sampah</h1>
+          <h1 className="text-3xl font-bold my-2">Kategori Sampah</h1>
           <p className="text-xl font-semibold">Informasi</p>
           <p className="my-2">
             Sampah adalah sisa buangan dari suatu produk atau barang yang sudah
@@ -171,4 +182,5 @@ const KategoriPage = () => {
   );
 };
 
+//untuk mengekspor components agar dapat di import/digunakan components lainnya tanpa menggunakan nama yang spesifik 
 export default KategoriPage;
